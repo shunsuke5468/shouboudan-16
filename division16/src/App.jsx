@@ -138,17 +138,14 @@ export default function App() {
         padding: "16px 16px 10px",
         position: "sticky", top: 0, zIndex: 100,
       }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span style={{ fontSize: 24 }}>🚒</span>
-            <div>
-              <div style={{ fontSize: 10, color: "#94a3b8", letterSpacing: 2 }}>令和8年度(2026年度)</div>
-              <div style={{ fontSize: 17, fontWeight: 900 }}>第16分団 一班</div>
-            </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+          <span style={{ fontSize: 24 }}>🚒</span>
+          <div>
+            <div style={{ fontSize: 10, color: "#94a3b8", letterSpacing: 2 }}>令和8年度(2026年度)</div>
+            <div style={{ fontSize: 17, fontWeight: 900 }}>第16分団 一班</div>
           </div>
-          <AdminBadge />
         </div>
-        <div style={{ display: "flex", gap: 4, overflowX: "auto" }}>
+        <div style={{ display: "flex", gap: 4, overflowX: "auto", alignItems: "center" }}>
           {tabs.map(t => (
             <button key={t.id} onClick={() => setTab(t.id)} style={{
               padding: "6px 12px", borderRadius: 8, border: "none", cursor: "pointer",
@@ -159,6 +156,9 @@ export default function App() {
               boxShadow: tab === t.id ? "0 2px 8px rgba(220,38,38,0.4)" : "none",
             }}>{t.icon} {t.label}</button>
           ))}
+          <div style={{ marginLeft: "auto", flexShrink: 0 }}>
+            <AdminBadge />
+          </div>
         </div>
       </div>
 
