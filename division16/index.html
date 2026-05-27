@@ -2,15 +2,25 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="🚒" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0f172a" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/shouboudan-16/manifest.json" />
+
+    <!-- iOS ホーム画面アイコン -->
+    <link rel="apple-touch-icon" href="/shouboudan-16/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>第16分団 一班 スケジュール</title>
+    <meta name="apple-mobile-web-app-title" content="16分団1班" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/shouboudan-16/icon-192.png" />
+
+    <title>第16分団 一班</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
