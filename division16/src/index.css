@@ -14,4 +14,5 @@ html, body, #root {
 
 body {
   -webkit-text-size-adjust: 100%;
+  padding-top: env(safe-area-inset-top, 0px);
 }
